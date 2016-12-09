@@ -55,6 +55,10 @@
   -webkit-transition-delay: @timing5; /* Safari */
   transition-delay: @timing5;
 }
+.delay6 {
+  -webkit-transition-delay: 3s; /* Safari */
+  transition-delay: 3s;
+}
 .origin-center-bottom {
   -ms-transform-origin: center bottom;
   -webkit-transform-origin: center bottom;
@@ -146,7 +150,7 @@ q:before,q:after {
 abbr,acronym { border: 0;
 }
 blockquote {
-  font-size: 1.6em;
+  font-size: 1.3em;
   text-align: left;
   font-weight: 700;
   line-height: 1.3em;
@@ -157,11 +161,12 @@ p {
   margin-bottom: 20px;
 }
 blockquote hr {
-  width: 25%;
-  height: 3px;
-  background-color: white;
+  width: 15%;
+  height: 2px;
+  background-color: @orange;
   border: none;
   margin-bottom: 30px;
+  margin-left: -20px;
 }
 blockquote .name {
   text-transform: uppercase;
@@ -276,7 +281,7 @@ a.inline-link {
   z-index: 1;
   right:0;
   .ease1;
-  .delay5;
+  .delay6;
   text-align:center;
   display: table;
   table-layout: fixed;
@@ -298,7 +303,7 @@ body.active .loader {
 }
 .loader > .svg-container {
   display: block;
-  margin: 0 auto;
+  margin: 20px auto 0;
   display: table-cell;
   vertical-align: middle;
 }
@@ -306,6 +311,7 @@ body.active .loader {
   width: 75px;
   height: 50px;
   padding-bottom: 20px;
+      margin-top: 20px;
   .ease1;
   .delay5;
 }
@@ -760,6 +766,9 @@ body.navigation #menu {
   h1 {
     font-size: 3em;
   }
+  h2 {
+    font-size: 2.5em;
+  }
  }
 
 
@@ -782,10 +791,6 @@ body.navigation #menu {
   z-index:0;
   .ease2;
 }
-body.active #myVideo {
-  opacity: 1;
-}
-
 
 
 /* Layer with position absolute in order to have it over the video
