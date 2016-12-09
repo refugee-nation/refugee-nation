@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="author" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/flexboxgrid.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="jquery.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<!-- <script type="text/javascript" src="../vendors/scrolloverflow.js"></script> -->
+	<style>
+	
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#000000', '#000000', '#000000', '#000000', '#000000'],
+       			slidesNavigation: true,
+       			anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+				menu: '#menu',
+				verticalCentered: true,
+				afterRender: function(){
+					//playing the video
+					$('video').get(0).play();
+				}
+       		});
+		});
+	</script>
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+
+</head>
+<body>
+
+<div id="logo">
+	<img src="img/logo.svg">
+</div>
+<ul id="menu">
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">The Refugee Nation</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">Be Part of Our Nation</a></li>
+    <li data-menuanchor="sixthPage"><a href="#sixthPage">Help the Nation</a></li>
+</ul>
+<div id="social">
+	<span class="white">Follow Us</span>
+	<a href="https://twitter.com/GoRefugeeNation" class="youtube">
+		<img src="svg/youtube.svg" type="image/svg+xml"/>
+	</a>
+	<a href="https://twitter.com/GoRefugeeNation" class="instagram">
+		<img src="svg/twitter.svg" type="image/svg+xml"/>
+		<object data="svg/twitter.svg" type="image/svg+xml"></object>
+	</a>
+	<a href="https://twitter.com/GoRefugeeNation" class="facebook">
+		<img src="svg/twitter.svg" />
+	</a>
+	<a href="https://twitter.com/GoRefugeeNation" class="twitter">
+		<img src="svg/twitter.svg" />
+	</a>
+</div>
+<div class="loader">
+	<div class="svg-container">
+		<h3 class="load-text">A symbolic nation to represent 65 million displaced people worldwide.</h3>
+		<svg viewBox="0 0 300 200" style="enable-background:new 0 0 300 200;" preserveAspectRatio="none" xml:space="preserve">
+		<style type="text/css">
+			.st0{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+		</style>
+		<line class="st0" x1="1.5" y1="1.7" x2="298.5" y2="1.7"/>
+		<line class="st0" x1="298.1" y1="1.7" x2="298.1" y2="198.4"/>
+		<line class="st0" x1="298.5" y1="198.4" x2="1.5" y2="198.4"/>
+		<line class="st0" x1="2" y1="198.6" x2="2" y2="1.8"/>
+		<rect class="top-fill" y="150" width="300" height="20"/>
+		</svg>
+	</div>
+</div>
+<div id="fullpage">
+	<div class="section" id="section0">
+		<!-- <video data-keepplaying autoplay loop muted id="myVideo">
+			<source src="vid/flag-bg_1.mp4" type="video/mp4">
+			<source src="vid/flag-bg_1.webm" type="video/webm">
+		</video> -->
+		<div class="row">
+		  	<div class="staff-list col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1">
+		        <h2 class="text-left orange layer" data-depth="0.2">We’re a symbolic nation<span class="white">.</span> A nation to represent 65 million people that don’t have a land to call home<span class="white">.</span> A nation of multiple stories and a common flag<span class="white">.</span> An orange and black flag inspired on the life vests many brothers and sisters had to wear in their search for a safer place to live<span class="white">.</span> An orange and black flag as an identity for one people who temporarily lost their own<span class="white">.</span> An orange and black flag to connect refugees with all those who can help<span class="white">.</span> We’re the Refugee Nation<span class="white">.</span> And we’re here to show the world that refugees exist<span class="white">.</span> That refugees matter. And while this crisis persists, we’ll be on their side<span class="white">.</span></h2>
+		        <h3 class="layer" data-depth="1">TEstin</h3>
+		   </div>
+		</div>
+		<div class="scroller">
+			<div class='scroll-text'>Scroll</div>
+			<div class='top'></div>
+			<div class="btm"></div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<video data-keepplaying autoplay loop muted id="myVideo">
+			<source src="vid/hero-bg-2.mp4" type="video/mp4">
+			<source src="vid/hero-bg-2.webm" type="video/webm">
+		</video>
+		<div class="scroller">
+			<div class='scroll-text'>Scroll</div>
+			<div class='top'></div>
+			<div class="btm"></div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<video data-keepplaying autoplay loop muted id="myVideo">
+			<source src="vid/hero-bg-2.mp4" type="video/mp4">
+			<source src="vid/hero-bg-2.webm" type="video/webm">
+		</video>
+		<div class="row flag">
+			<div class="col-xs-4 col-xs-offset-4 layer">
+				<h2 class="white text-left">Our Flag</h2>
+				<p class="white text-left">
+				The flag of the Refugee Nation was designed by the artist Yara Said, a Syrian refugee who found asylum in Amsterdam.
+				</p>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-xs-4 col-xs-offset-4">
+				<blockquote class="white">
+				<hr align="left">
+				“Black and orange is a symbol of solidarity with all these brave souls that had to wear life- vests to cross the sea to look for safety in a new country. Since I had wear one, I have a personal engagement with these life-vests, and these two colors."
+				<p class='name'>
+				Yara Said
+				</p>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<video data-keepplaying autoplay loop muted id="myVideo">
+			<source src="vid/hero-bg-2.mp4" type="video/mp4">
+			<source src="vid/hero-bg-2.webm" type="video/webm">
+		</video>
+		<div class="row flag">
+			<div class="col-xs-4 col-xs-offset-4 layer">
+				<h2 class="white text-left">Our Anthem</h2>
+				<p class="white text-left">
+				The anthem was written by the composer Moutaz Arian, a Syrian refugee currently living in Istanbul. Since the refugee crisis is a global issue, Arian decided to create an anthem without words to resonate beyond borders: 
+				</p>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-xs-4 col-xs-offset-4">
+				<blockquote class="white">
+				<hr align="left">
+				"Music is the best language to deliver my message to humanity, which is to love each other, and this language does not require a translation.” 
+				<p class='name'>
+				Moutaz Arian
+				</p>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<video data-keepplaying autoplay loop muted id="myVideo">
+			<source src="vid/hero-bg-2.mp4" type="video/mp4">
+			<source src="vid/hero-bg-2.webm" type="video/webm">
+		</video>
+		<div class="row flag">
+			<div class="col-xs-4 col-xs-offset-4 layer">
+				<h2 class="white text-left">Our People/h2>
+				<p class="white text-left">
+				The flag of the Refugee Nation was designed by the artist Yara Said, a Syrian refugee who found asylum in Amsterdam.
+				</p>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-xs-4 col-xs-offset-4">
+				<blockquote class="white">
+				<hr align="left">
+				“Black and orange is a symbol of solidarity with all these brave souls that had to wear life- vests to cross the sea to look for safety in a new country. Since I had wear one, I have a personal engagement with these life-vests, and these two colors."
+				<p class='name'>
+				Yara Said
+				</p>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section5">
+		<div class="intro">
+			<h1>No CSS3? No problem!</h1>
+			<p>If CSS3 is not available, animations will fall back to jQuery animate.</p>
+		</div>
+	</div>
+</div>
+</body>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/jquery.parallax.min.js"></script>
+<script>
+	$('.staff-list').parallax();
+	$('#fullpage').fullpage({
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+
+        // afterLoad: function(anchorLink, index){
+        //     var loadedSection = $(this);
+
+        //     //using index
+        //     if(index == 2){
+        //         alert("Section 3 ended loading");
+        //     }
+        // }
+    });
+</script>
+</html>
