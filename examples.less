@@ -82,32 +82,6 @@
   -o-transition: all .3s @cubic-bezier;
   transition: all .3s @cubic-bezier;
 }
-// .filler-line {
-//   position: relative;
-//   display: inline-block;
-//   white-space: nowrap;
-// }
-// body.active .filler-line span.filler {
-//   width: 0%;
-//   left: 100%;
-// }
-// body.active .filler-line:nth-child(1) span.filler {
-//   -webkit-transition-delay: @timing4; /* Safari */
-//   transition-delay: @timing4;
-// }
-// body.active .filler-line:nth-child(2) span.filler {
-//   -webkit-transition-delay: calc(@delay4 + .1s); /* Safari */
-//   transition-delay: calc(@delay4 + .1s);
-// }
-// body.active .filler-line:nth-child(3) span.filler {
-//   -webkit-transition-delay: calc(@delay4 + .2s); /* Safari */
-//   transition-delay: calc(@delay4 + .2s);
-// }
-body.active #menu {
-  top: 6%;
-  opacity: 1;
-}
-
 
 /* Reset CSS
  * --------------------------------------- */
@@ -253,6 +227,33 @@ p{
 body.active .section {
 }
 
+.section {
+  .background.layer {
+    width: 110%;
+    height: 110vh;
+    background-size: 100% 100%;
+    background-color: none; /* in case the video doesn't fit the whole page*/
+    background-position: center center;
+    background-image: cover;
+    position: absolute;
+    top:0;
+    left: 0;
+  }
+}
+#fullpage {
+  #section4 {
+    .background.layer {
+      &:nth-child(2) {
+        background-image: url(img/our-people-2.png);
+      }
+      &:nth-child(1) {
+        background-image: url(img/our-people-1.jpg);
+      }
+    }
+  }
+}
+
+
 // Links
 
 a.inline-link {
@@ -308,43 +309,43 @@ body.active .loader {
   .ease1;
   .delay5;
 }
-body.active .loader > .svg-container > svg {
-  width: 0;
-  height: 100px;
-}
-body.active .loader svg line.st0 {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 300;
-}
-.loader svg line.st0 {
-  position: absolute;
-  z-index: -1;
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  animation-iteration-count: 1;
-  -webkit-transition: stroke-dashoffset @timing3 @cubic-bezier;
-  -moz-transition: stroke-dashoffset @timing3 @cubic-bezier;
-  -o-transition: stroke-dashoffset @timing3 @cubic-bezier;
-  transition: stroke-dashoffset @timing3 @cubic-bezier;
-}
-body.active .loader svg line.st0:nth-child(odd) {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 200;
-}
-.loader svg line.st0:nth-child(odd) {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-}
-.loader svg rect.top-fill,
-.loader svg rect.btm-fill {
-  width: 0;
-  .ease2;
-  .delay2;
-}
-body.active .loader svg rect.top-fill,
-body.active .loader svg rect.btm-fill {
-  width: 100%;
-}
+// body.active .loader > .svg-container > svg {
+//   width: 0;
+//   height: 100px;
+// }
+// body.active .loader svg line.st0 {
+//   stroke-dashoffset: 0;
+//   stroke-dasharray: 300;
+// }
+// .loader svg line.st0 {
+//   position: absolute;
+//   z-index: -1;
+//   stroke-dasharray: 300;
+//   stroke-dashoffset: 300;
+//   animation-iteration-count: 1;
+//   -webkit-transition: stroke-dashoffset @timing3 @cubic-bezier;
+//   -moz-transition: stroke-dashoffset @timing3 @cubic-bezier;
+//   -o-transition: stroke-dashoffset @timing3 @cubic-bezier;
+//   transition: stroke-dashoffset @timing3 @cubic-bezier;
+// }
+// body.active .loader svg line.st0:nth-child(odd) {
+//   stroke-dashoffset: 0;
+//   stroke-dasharray: 200;
+// }
+// .loader svg line.st0:nth-child(odd) {
+//   stroke-dasharray: 200;
+//   stroke-dashoffset: 200;
+// }
+// .loader svg rect.top-fill,
+// .loader svg rect.btm-fill {
+//   width: 0;
+//   .ease2;
+//   .delay2;
+// }
+// body.active .loader svg rect.top-fill,
+// body.active .loader svg rect.btm-fill {
+//   width: 100%;
+// }
 .load-text span {
   display: inline-block;
   opacity:0;
@@ -669,10 +670,9 @@ div.scroll-text {
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
-  .ease2;
-  .delay5;
+  .ease1;
 }
-#menu.active {
+body.navigation #menu {
   top: 6%;
   opacity: 1;
 }
@@ -690,7 +690,7 @@ div.scroll-text {
   .ease2;
   overflow: hidden;
  }
- body.active #logo {
+ body.navigation #logo {
   opacity: 1;
  }
 
@@ -699,11 +699,28 @@ div.scroll-text {
  #social {
   position: absolute;
   left: 4%;
-  bottom: 5%;
+  bottom: 2%;
   z-index: 1;
-  img {
-    width: 50px;
+  .ease1;
+  opacity: 0;
+  &> span {
+    display: block;
+    float: left;
+    padding-top: 5px;
+    margin-right: 10px;
   }
+  a {
+    height: 25px;
+    display: inline-block;
+    margin-right: 5px;
+    img {
+      width: 25px;
+    }
+  }
+ }
+ body.navigation #social{
+  opacity: 1;
+  bottom: 5%;
  }
 
  /* Containers */
@@ -742,9 +759,6 @@ div.scroll-text {
   @media only screen and (min-width: 1280px)  {
   h1 {
     font-size: 3em;
-  }
-  h2 {
-    font-size: 2.5em;
   }
  }
 
