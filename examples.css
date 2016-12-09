@@ -187,8 +187,8 @@ p {
   line-height: 1.5em;
   margin-bottom: 20px;
 }
-blockquote hr {
-  width: 15%;
+hr {
+  width: 80px;
   height: 2px;
   background-color: #f16841;
   border: none;
@@ -202,9 +202,6 @@ blockquote .name {
   letter-spacing: 1px;
   font-size: 12px;
   margin-top: 20px;
-}
-hr {
-  width: 100%;
 }
 /* Custom CSS
  * --------------------------------------- */
@@ -271,6 +268,48 @@ p {
 }
 #fullpage #section4 .background.layer:nth-child(1) {
   background-image: url(img/our-people-1.jpg);
+}
+.row .slide-left {
+  -ms-transform: translate(20px, 0);
+  /* IE 9 */
+  -webkit-transform: translate(20px, 0);
+  /* Safari */
+  transform: translate(20px, 0);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.row.active .slide-left {
+  -ms-transform: translate(0, 0);
+  /* IE 9 */
+  -webkit-transform: translate(0, 0);
+  /* Safari */
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.row .slide-right {
+  -ms-transform: translate(-20px, 0);
+  /* IE 9 */
+  -webkit-transform: translate(-20px, 0);
+  /* Safari */
+  transform: translate(-20px, 0);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.row.active .slide-right {
+  -ms-transform: translate(0, 0);
+  /* IE 9 */
+  -webkit-transform: translate(0, 0);
+  /* Safari */
+  transform: translate(0, 0);
+  opacity: 1;
 }
 a.inline-link {
   color: #ffffff;

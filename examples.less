@@ -160,8 +160,8 @@ p {
   line-height: 1.5em;
   margin-bottom: 20px;
 }
-blockquote hr {
-  width: 15%;
+hr {
+  width: 80px;
   height: 2px;
   background-color: @orange;
   border: none;
@@ -175,9 +175,6 @@ blockquote .name {
   letter-spacing: 1px;
   font-size: 12px;
   margin-top: 20px;
-}
-hr {
-  width: 100%;
 }
 
 
@@ -256,6 +253,38 @@ body.active .section {
       }
     }
   }
+}
+.row {
+    .slide-left {
+      -ms-transform: translate(20px, 0); /* IE 9 */
+      -webkit-transform: translate(20px, 0); /* Safari */
+      transform: translate(20px, 0);
+      .ease1;
+      opacity: 0;
+    }
+    &.active {
+      .slide-left {
+        -ms-transform: translate(0, 0); /* IE 9 */
+        -webkit-transform: translate(0, 0); /* Safari */
+        transform: translate(0, 0);
+        opacity:1;
+      }
+    }
+    .slide-right {
+      -ms-transform: translate(-20px, 0); /* IE 9 */
+      -webkit-transform: translate(-20px, 0); /* Safari */
+      transform: translate(-20px, 0);
+      .ease1;
+      opacity: 0;
+    }
+    &.active {
+      .slide-right {
+        -ms-transform: translate(0, 0); /* IE 9 */
+        -webkit-transform: translate(0, 0); /* Safari */
+        transform: translate(0, 0);
+        opacity:1;
+      }
+    }
 }
 
 

@@ -108,18 +108,18 @@
 	<div class="section" id="section2">
 		<div class="row flag">
 			<div class="col-xs-4 col-xs-offset-4 layer">
-				<h2 class="white text-left">Our Flag</h2>
-				<p class="white text-left">
+				<h2 class="white text-left slide-left">Our Flag</h2>
+				<p class="white text-left slide-left">
 				The flag of the Refugee Nation was designed by the artist Yara Said, a Syrian refugee who found asylum in Amsterdam.
 				</p>
 			</div>	
 		</div>
 		<div class="row">
 			<div class="col-xs-4 col-xs-offset-4">
-				<blockquote class="white">
-				<hr align="left">
+				<hr align="left" class="slide-right">
+				<blockquote class="white slide-left">
 				“Black and orange is a symbol of solidarity with all these brave souls that had to wear life- vests to cross the sea to look for safety in a new country. Since I had wear one, I have a personal engagement with these life-vests, and these two colors."
-				<p class='name'>
+				<p class='name slide-left'>
 				Yara Said
 				</p>
 				</blockquote>
@@ -128,7 +128,7 @@
 	</div>
 	<div class="section" id="section3">
 		<div class="row">
-			<div class="col-xs-4 col-xs-offset-4">
+			<div class="col-xs-4 col-xs-offset-4 slide-left">
 				<h2 class="white text-left">Our Anthem</h2>
 				<p class="white text-left">
 				The anthem was written by the composer Moutaz Arian, a Syrian refugee currently living in Istanbul. Since the refugee crisis is a global issue, Arian decided to create an anthem without words to resonate beyond borders: 
@@ -137,10 +137,10 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-4 col-xs-offset-4">
-				<blockquote class="white">
-				<hr align="left">
+				<hr align="left" class="slide-right">
+				<blockquote class="white slide-left">
 				"Music is the best language to deliver my message to humanity, which is to love each other, and this language does not require a translation.” 
-				<p class='name'>
+				<p class='name slide-left'>
 				Moutaz Arian
 				</p>
 				</blockquote>
@@ -192,6 +192,12 @@
             //using indexd
             if(index == 2){
                 $('body').addClass('navigation');
+            }
+            if(index == 3){
+                $('#section2 .row').addClass('active');
+            }
+            if(index == 4){
+                $('#section3 .row').addClass('active');
             }
         }
     });
