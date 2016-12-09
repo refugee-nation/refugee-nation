@@ -650,7 +650,7 @@ div.scroll-text {
 /* Menu */
 #menu li {
   font-family: 'Helvetica', 'Colfax-Bold', sans-serif;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 800;
   display: inline-block;
   position: relative;
@@ -663,16 +663,20 @@ div.scroll-text {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   text-align: center;
-  height: 100%;
+  height: 80%;
   line-height: 45px;
   line-height: 1em;
+  border-right: 1px solid #f16841;
 }
 #menu li.active {
-  color: #fff;
+  color: #f16841;
 }
 #menu li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #f16841;
+}
+#menu li a.secondary {
+  font-weight: 400;
 }
 #menu li.active a:hover {
   color: #ffffff;
@@ -684,25 +688,6 @@ div.scroll-text {
 }
 #menu li.active a {
   color: #fff;
-}
-#menu li:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  z-index: -1;
-  bottom: 0;
-  left: 30%;
-  height: 2px;
-  background: #e06035;
-  transform-origin: right center;
-  transform: translateZ(0) scaleX(0);
-  transition: transform .3s ease;
-  width: 40%;
-}
-#menu li.active:after,
-#menu li:hover:after {
-  transform-origin: left center;
-  transform: translateZ(0) scaleX(1);
 }
 #menu {
   text-align: center;

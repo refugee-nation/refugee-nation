@@ -34,7 +34,24 @@
 				afterRender: function(){
 					//playing the video
 					$('video').get(0).play();
-				}
+				},
+				afterLoad: function(anchorLink, index){
+		            var loadedSection = $(this);
+
+		            //using indexd
+		            if(index == 2){
+		                $('body').addClass('navigation');
+		            }
+		            if(index == 3){
+		                $('#section2 .row').addClass('active');
+		            }
+		            if(index == 4){
+		                $('#section3 .row').addClass('active');
+		            }
+		            if(index == 5){
+		                $('#section4 .row').addClass('active');
+		            }
+		        }
        		});
 		});
 	</script>
@@ -48,11 +65,10 @@
 </div>
 <ul id="menu">
     <li data-menuanchor="firstPage" class="active"><a href="#firstPage">The Refugee Nation</a></li>
-    <li data-menuanchor="firstPage" class="active"><a href="#secondPage">Our Flag</a></li>
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">The Refugee Nation</a></li>
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">The Refugee Nation</a></li>
-    <li data-menuanchor="secondPage"><a href="#secondPage">Be Part of Our Nation</a></li>
-    <li data-menuanchor="sixthPage"><a href="#sixthPage">Help the Nation</a></li>
+    <li data-menuanchor="thirdPage"><a class="secondary" href="#secondPage">Our Flag</a></li>
+    <li data-menuanchor="fourthPage"><a href="#fourthPage" class="secondary">Our Anthem</a></li>
+    <li data-menuanchor="fifthPage"><a href="#fifthPage" class="secondary">Our People</a></li>
+    <li data-menuanchor="sixthPage"><a href="#sixthPage">Be Part of Our Nation</a></li>
 </ul>
 <div id="social">
 	<span class="white">Follow Us</span>
@@ -183,27 +199,5 @@
 <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/jquery.parallax.min.js"></script>
 <script>
 	$('#section0').parallax();
-	$('#section4').parallax();
-	$('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
-
-        afterLoad: function(anchorLink, index){
-            var loadedSection = $(this);
-
-            //using indexd
-            if(index == 2){
-                $('body').addClass('navigation');
-            }
-            if(index == 3){
-                $('#section2 .row').addClass('active');
-            }
-            if(index == 4){
-                $('#section3 .row').addClass('active');
-            }
-            if(index == 5){
-                $('#section4 .row').addClass('active');
-            }
-        }
-    });
 </script>
 </html>
